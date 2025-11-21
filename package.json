@@ -1,0 +1,22 @@
+{
+  "name": "ielts-writing-answer-sheet",
+  "version": "1.0.0",
+  "description": "Online IELTS Writing Answer Sheet with Telegram integration",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "serve public -p 3000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "vercel": "^28.16.0"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "author": "IELTS Writing System",
+  "license": "MIT"
+}
