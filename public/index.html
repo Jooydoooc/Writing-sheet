@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Writing Answer Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Bar with Student Info and Timer -->
+        <header class="top-bar">
+            <div class="student-info">
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <input type="text" id="studentSurname" placeholder="Student Surname" required>
+            </div>
+            <div class="timer-section">
+                <div id="timerDisplay">00:00:00</div>
+                <button id="startTestBtn" class="btn btn-primary">Start Test</button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <button id="task1Btn" class="nav-btn active">Task 1</button>
+            <button id="task2Btn" class="nav-btn">Task 2</button>
+        </nav>
+
+        <!-- Task 1 Screen -->
+        <div id="task1Screen" class="screen active">
+            <div class="two-column-layout">
+                <!-- Left Column: Task 1 Question -->
+                <div class="left-column">
+                    <h2>Task 1 Question</h2>
+                    <div class="question-area">
+                        <textarea id="task1Question" readonly class="question-text">
+The chart below shows the number of men and women in further education in Britain in three periods and whether they were studying full-time or part-time.
+
+Summarise the information by selecting and reporting the main features, and make comparisons where relevant.
+                        </textarea>
+                    </div>
+                </div>
+
+                <!-- Right Column: Task 1 Answer -->
+                <div class="right-column">
+                    <h2>Task 1 Answer</h2>
+                    <textarea id="task1Answer" placeholder="Write your Task 1 answer here..." class="answer-text"></textarea>
+                    <div class="word-count">Words: <span id="task1WordCount">0</span></div>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="nextToTask2" class="btn btn-secondary">Next: Task 2 →</button>
+            </div>
+        </div>
+
+        <!-- Task 2 Screen -->
+        <div id="task2Screen" class="screen">
+            <div class="two-column-layout">
+                <!-- Left Column: Task 2 Question -->
+                <div class="left-column">
+                    <h2>Task 2 Question</h2>
+                    <div class="question-area">
+                        <div class="question-inputs">
+                            <label>Upload Question Image (Optional):</label>
+                            <input type="file" id="task2QuestionImage" accept="image/*">
+                            
+                            <label>Or Enter Question Text:</label>
+                            <textarea id="task2QuestionText" placeholder="Enter Task 2 question text here..." class="question-text"></textarea>
+                        </div>
+                        <div id="task2QuestionDisplay" class="question-display">
+                            <!-- Will display either image or text -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Task 2 Answer -->
+                <div class="right-column">
+                    <h2>Task 2 Answer</h2>
+                    <textarea id="task2Answer" placeholder="Write your Task 2 answer here..." class="answer-text"></textarea>
+                    <div class="word-count">Words: <span id="task2WordCount">0</span></div>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="backToTask1" class="btn btn-secondary">← Back to Task 1</button>
+                <button id="submitTest" class="btn btn-primary">Submit Test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <h3>Warning</h3>
+            <p>You have left the test page. If you leave again, your answers will be cleared and the test will be restarted.</p>
+            <button id="modalOkBtn" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <h3 id="messageTitle">Message</h3>
+            <p id="messageText"></p>
+            <button id="messageOkBtn" class="btn btn-primary">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
