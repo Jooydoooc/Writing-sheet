@@ -15,7 +15,7 @@
     "vercel": "^28.16.0"
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "author": "IELTS Writing System",
   "license": "MIT"
